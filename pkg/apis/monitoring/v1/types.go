@@ -69,7 +69,8 @@ type Prometheus struct {
 	// included when requesting from the apiserver, only from the Prometheus
 	// Operator API itself. More info:
 	// https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
-	Status *PrometheusStatus `json:"status,omitempty"`
+	Status     *PrometheusStatus `json:"status,omitempty"`
+	TestStatus string            `json:testStatus, omitempty`
 }
 
 // PrometheusList is a list of Prometheuses.
